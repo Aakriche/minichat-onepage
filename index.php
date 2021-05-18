@@ -60,11 +60,11 @@
 
     <?php
     $searchSend = new PDO('mysql: host=localhost;dbname=chat', 'root', '');
-        $searchResp = $searchSend->query("SELECT DISTINCT * FROM messages ORDER BY id DESC LIMIT 0, 10");
+        $searchResp = $searchSend->query("SELECT DISTINCT pseudo, message, DATE_FORMAT(date_creation, '%d/%m/%Y %Hh%imin%ss') AS date FROM messages ORDER BY id DESC LIMIT 0, 10");
         while($donnees = $searchResp->fetch()) {
             echo '<div class="box">
             <div class="pseudoBox"><p>'
-                    .ucfirst($donnees['date_creation'])
+                    .ucfirst($donnees['date'])
                     .'</p></div><div class="pseudoBox"><p>'
                     .ucfirst($donnees['pseudo'])
                     .'</p></div><div class="messageBox"><p>'
