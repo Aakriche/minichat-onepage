@@ -1,0 +1,94 @@
+.formulaire {
+    max-width: 500px;
+    height: 400px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: bisque;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    border: solid black thin;
+}
+
+input, textarea {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#message {
+    height: 80px;
+}
+
+a {
+    display: block;
+    width: 150px;
+    margin:  20px auto;
+    border: solid black thin;
+    text-align: center;
+    text-decoration: none;
+    background-color: wheat;
+    color: black;
+}
+
+button {
+    display: block;
+    width: 150px;
+    margin:  20px auto;
+
+}
+
+label {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;;
+    margin-bottom: 10px;
+}
+
+.chat {
+    max-width: 500px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    border-top: solid black thin;
+    border-right: solid black thin;
+    border-left: solid black thin;
+
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    background-color: blanchedalmond;
+
+}
+
+.messageBox {
+    width: 80%;
+    border-bottom: solid black thin;
+   
+}
+
+.pseudoBox > p {
+    text-align: center;
+}
+
+.messageBox > p {
+    margin-left: 10px;
+}
+
+
+.pseudoBox {
+    width: 20%;
+    background-color: beige;
+    border-right: solid black thin;
+    border-bottom: solid black thin;
+
+
+}
