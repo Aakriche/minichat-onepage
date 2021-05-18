@@ -63,9 +63,11 @@
         $searchResp = $searchSend->query("SELECT DISTINCT * FROM messages ORDER BY id DESC LIMIT 0, 10");
         while($donnees = $searchResp->fetch()) {
             echo '<div class="box">
-                    <div class="pseudoBox"><p>'
+            <div class="pseudoBox"><p>'
+                    .ucfirst($donnees['date_creation'])
+                    .'</p></div><div class="pseudoBox"><p>'
                     .ucfirst($donnees['pseudo'])
-                    .'</div><div class="messageBox"><p>'
+                    .'</p></div><div class="messageBox"><p>'
                     .$donnees['message']
                     .'</p></div></div>';
         }
