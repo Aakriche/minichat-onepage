@@ -30,8 +30,9 @@
             header("Location: index.php?error=invalidmessage");
             exit();
         }else{
-            $sql= "INSERT INTO messages(pseudo, message) VALUES('".$pseudo."','".$message."');";
-            $res= $searchSend->query($sql);
+            $sql= "INSERT INTO messages(pseudo, message) VALUES(?, ?);";
+            $res= $searchSend->prepare($sql);
+            $res->execute(array($pseudo, $message));
             if(!$res){
                 header("Location: index.php?error=sqlerror");
                 exit(); 
