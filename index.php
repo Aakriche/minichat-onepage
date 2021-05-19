@@ -66,9 +66,9 @@
             <div class="pseudoBox"><p>'
                     .ucfirst($donnees['date'])
                     .'</p></div><div class="pseudoBox"><p>'
-                    .ucfirst($donnees['pseudo'])
+                    .htmlspecialchars(ucfirst($donnees['pseudo']))
                     .'</p></div><div class="messageBox"><p>'
-                    .$donnees['message']
+                    .htmlspecialchars($donnees['message'])
                     .'</p></div></div>';
         }
 
